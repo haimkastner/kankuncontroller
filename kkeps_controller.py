@@ -34,7 +34,7 @@ def applyConfig():
     ##
     global IFACE
     IFACE = "wlan0"
-	# Remove next 4 lines because this info we want to get by arguments only
+    # Remove next 4 lines because this info we want to get by arguments only
     #global RHOST
     #RHOST = "192.168.1.16"
     #global RMAC
@@ -412,9 +412,9 @@ def main():
     action = None
     options, remainder = getopt.getopt(sys.argv[1:], 'a:vh', ['action=','verbose','num=','start-time=','stop-time=','enabled=','on-enabled=','off-enabled=','repeatstr=','ssid=','key=','initial-password=','device-name=','ip=','help'])
 
-	# Add this code to set ip and mac global from user arguments
+    # Add this code to set ip and mac global from user arguments
     # Example for use:
-	# $	python kkeps_controller.py -a off ip=192.168.1.16 mac=44:44:44:ff:ff:ff
+    # $	python kkeps_controller.py -a off ip=192.168.1.16 mac=44:44:44:ff:ff:ff
     for arg in remainder:
         opt = arg.split('=')
         if opt[0] == 'ip':
@@ -462,7 +462,7 @@ def main():
         elif opt in ('device-name'):
             global DEVNAME
             DEVNAME = arg
-		# Remove next lines because this info we get it before in new part of code above
+	# Remove next lines because this info we get it before in new part of code above
         #elif opt in ('ip'):
             #global RHOST
             #RHOST = arg
